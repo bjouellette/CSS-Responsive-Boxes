@@ -1,3 +1,41 @@
+
 body {
   background: blanchedalmond;
+}
+
+/* Default settings for mobile view less than 600px*/
+.container{
+  display: flex;
+  min-height: 100vh;
+  gap: 1em;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.a{
+  flex-grow: 1;
+  text-align: center;
+  border: 3px solid black;
+  width: 100%;
+  background-color: coral;
+}
+.b{
+  flex-grow: 3;
+  text-align: center;
+  border: 3px solid black;
+  background-color: aqua;
+}
+.c{
+  flex-grow: 1;
+  text-align: center;
+  border: 3px solid black;
+  background-color: yellowgreen;
+  justify-content: space-around;
+
+}
+/* Adjusts viewport to desktop view when less than 600px */
+@media (min-width: 600px){
+  .container{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
