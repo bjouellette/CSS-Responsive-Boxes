@@ -1,3 +1,68 @@
 body {
   background: peachpuff;
 }
+/* Default settings for mobile view less than 600px*/
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  gap: 1em;
+}
+
+.a, .h{
+  text-align: center;
+  width: 100%;
+  background-color: coral;
+}
+.a, .b, .c, .d, .e, .f, .g{
+  height: 15%;
+  flex-grow: 1;
+  text-align: center;
+  border: 3px solid black;
+}
+.h{
+  height: 55%;
+  border: 3px solid black;
+}
+.b, .c, .d, .e, .f, .g{
+  width: 25%;
+  background-color: darkcyan;
+}
+
+/* Adjusts viewport to desktop view when less than 600px */
+@media (min-width: 600px){
+  .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .a {
+    grid-row: 1;
+    grid-column: 1/5;
+  }
+  .b, .c, .d{
+    grid-column: 2/3;
+  }
+  .e, .f, .g{
+    grid-column: 3;
+  }
+  .b, .e{
+    grid-column: 1/2;
+  }
+  .c, .f{
+    grid-column: 2/3;
+  }
+  .d, .g{
+    grid-column: 3/4;
+  }
+  .h{
+    grid-row: 2/4;
+    grid-column: 4;
+  }
+  .a, .b, .c, .d, .e, .f, .g, .h{
+    width: 100%;
+    height: 100%;
+  }
+}

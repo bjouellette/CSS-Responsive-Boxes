@@ -22,13 +22,13 @@ body {
   flex-grow: 3;
   text-align: center;
   border: 3px solid black;
-  background-color: aqua;
+  background-color: darkcyan;
 }
 .c{
   flex-grow: 1;
   text-align: center;
   border: 3px solid black;
-  background-color: yellowgreen;
+  background-color: coral;
   justify-content: space-around;
 
 }
